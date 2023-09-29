@@ -27,7 +27,9 @@ UFriesLibraryBPLibrary::UFriesLibraryBPLibrary(const FObjectInitializer& ObjectI
 
 // Development Functions (Ex: Print with different variables)
 
-void UFriesLibraryBPLibrary::PrintStringWithTell(const UObject* WorldContextObject, const FString InString /*= TEXT("Hello")*/, const bool bPrintToScreen /*= true*/, const bool bPrintToLog /*= true*/, const FLinearColor TextColor /*= FLinearColor(0.5, 0.0, 1.0)*/, const float Duration /*= 2.f*/, const FName Key /*= NAME_None*/)
+void UFriesLibraryBPLibrary::PrintStringWithTell(const UObject* WorldContextObject, const FString InString /*= TEXT("Hello")*/,
+	const bool bPrintToScreen /*= true*/, const bool bPrintToLog /*= true*/, const FLinearColor TextColor /*= FLinearColor(0.5, 0.0, 1.0)*/,
+	const float Duration /*= 2.f*/, const FName Key /*= NAME_None*/)
 {
 	// Create string to print
 	FString StringToPrint;
@@ -39,7 +41,9 @@ void UFriesLibraryBPLibrary::PrintStringWithTell(const UObject* WorldContextObje
 	UKismetSystemLibrary::PrintString(WorldContextObject, StringToPrint, bPrintToScreen, bPrintToLog, TextColor, Duration, Key);
 }
 
-void UFriesLibraryBPLibrary::PrintBoolean(const UObject* WorldContextObject, const bool bInBoolean, const float Duration, const bool bPrintFunctionOwner, const bool bPrintToScreen, const bool bPrintToLog, const FLinearColor TextColor, const FName Key)
+void UFriesLibraryBPLibrary::PrintBoolean(const UObject* WorldContextObject, const bool bInBoolean, const float Duration,
+	const bool bPrintFunctionOwner, const bool bPrintToScreen, const bool bPrintToLog,
+	const FLinearColor TextColor, const FName Key)
 {
 	if (bPrintFunctionOwner)
 	{
@@ -51,7 +55,9 @@ void UFriesLibraryBPLibrary::PrintBoolean(const UObject* WorldContextObject, con
 	}
 }
 
-void UFriesLibraryBPLibrary::PrintInteger(const UObject* WorldContextObject, const int32 IntegerValue, const float Duration, const bool bPrintFunctionOwner, const bool bPrintToScreen, const bool bPrintToLog, const FLinearColor TextColor, const FName Key)
+void UFriesLibraryBPLibrary::PrintInteger(const UObject* WorldContextObject, const int32 IntegerValue, const float Duration,
+	const bool bPrintFunctionOwner, const bool bPrintToScreen, const bool bPrintToLog,
+	const FLinearColor TextColor, const FName Key)
 {
 	if (bPrintFunctionOwner)
 	{
@@ -63,7 +69,9 @@ void UFriesLibraryBPLibrary::PrintInteger(const UObject* WorldContextObject, con
 	}
 }
 
-void UFriesLibraryBPLibrary::PrintFloat(const UObject* WorldContextObject, const float FloatValue, const float Duration, const bool bPrintFunctionOwner, const bool bPrintToScreen, const bool bPrintToLog, const FLinearColor TextColor, const FName Key)
+void UFriesLibraryBPLibrary::PrintFloat(const UObject* WorldContextObject, const float FloatValue,
+	const float Duration, const bool bPrintFunctionOwner, const bool bPrintToScreen, const bool bPrintToLog,
+	const FLinearColor TextColor, const FName Key)
 {
 	if (bPrintFunctionOwner)
 	{
@@ -87,7 +95,9 @@ void UFriesLibraryBPLibrary::PrintName(const UObject* WorldContextObject, const 
 	}
 }
 
-void UFriesLibraryBPLibrary::PrintVector(const UObject* WorldContextObject, const FVector VectorValue /*= FVector(0.f, 0.f, 0.f)*/, const float Duration /*= 2.f*/, const bool bPrintFunctionOwner, const bool bPrintToScreen /*= true*/, const bool bPrintToLog /*= true*/, const FLinearColor TextColor /*= FLinearColor(1.0, 0.0, 0.0)*/, const FName Key /*= NAME_None*/)
+void UFriesLibraryBPLibrary::PrintVector(const UObject* WorldContextObject, const FVector VectorValue /*= FVector(0.f, 0.f, 0.f)*/,
+                                         const float Duration /*= 2.f*/, const bool bPrintFunctionOwner, const bool bPrintToScreen /*= true*/,
+                                         const bool bPrintToLog /*= true*/, const FLinearColor TextColor /*= FLinearColor(1.0, 0.0, 0.0)*/, const FName Key /*= NAME_None*/)
 {
 	if (bPrintFunctionOwner)
 	{
@@ -99,7 +109,9 @@ void UFriesLibraryBPLibrary::PrintVector(const UObject* WorldContextObject, cons
 	}
 }
 
-void UFriesLibraryBPLibrary::PrintRotator(const UObject* WorldContextObject, const FRotator RotatorValue /*= FRotator(0.f, 0.f, 0.f)*/, const float Duration /*= 2.f*/, const bool bPrintFunctionOwner, const bool bPrintToScreen /*= true*/, const bool bPrintToLog /*= true*/, const FLinearColor TextColor /*= FLinearColor(1.0, 0.0, 0.0)*/, const FName Key /*= NAME_None*/)
+void UFriesLibraryBPLibrary::PrintRotator(const UObject* WorldContextObject, const FRotator RotatorValue /*= FRotator(0.f, 0.f, 0.f)*/,
+	const float Duration /*= 2.f*/, const bool bPrintFunctionOwner, const bool bPrintToScreen /*= true*/, const bool bPrintToLog /*= true*/,
+	const FLinearColor TextColor /*= FLinearColor(1.0, 0.0, 0.0)*/, const FName Key /*= NAME_None*/)
 {
 	if (bPrintFunctionOwner)
 	{
@@ -111,7 +123,9 @@ void UFriesLibraryBPLibrary::PrintRotator(const UObject* WorldContextObject, con
 	}
 }
 
-void UFriesLibraryBPLibrary::PrintTransform(const UObject* WorldContextObject, const FTransform& TransformValue /*= FRotator(0.f, 0.f, 0.f)*/, const float Duration /*= 2.f*/, const bool bPrintFunctionOwner, const bool bPrintToScreen /*= true*/, const bool bPrintToLog /*= true*/, const FLinearColor TextColor /*= FLinearColor(1.0, 0.0, 0.0)*/, const FName Key /*= NAME_None*/)
+void UFriesLibraryBPLibrary::PrintTransform(const UObject* WorldContextObject, const FTransform& TransformValue /*= FRotator(0.f, 0.f, 0.f)*/,
+	const float Duration /*= 2.f*/, const bool bPrintFunctionOwner, const bool bPrintToScreen /*= true*/, const bool bPrintToLog /*= true*/,
+	const FLinearColor TextColor /*= FLinearColor(1.0, 0.0, 0.0)*/, const FName Key /*= NAME_None*/)
 {
 	if (bPrintFunctionOwner)
 	{
@@ -123,7 +137,9 @@ void UFriesLibraryBPLibrary::PrintTransform(const UObject* WorldContextObject, c
 	}
 }
 
-void UFriesLibraryBPLibrary::PrintObject(const UObject* WorldContextObject, const UObject* Object, const float Duration /*= 2.f*/, const bool bPrintFunctionOwner, const bool bPrintToScreen /*= true*/, const bool bPrintToLog /*= true*/, const bool bPrintIfInvalid, const FLinearColor TextColor /*= FLinearColor(1.0, 0.0, 0.0)*/, const FName Key /*= NAME_None*/)
+void UFriesLibraryBPLibrary::PrintObject(const UObject* WorldContextObject, const UObject* Object, const float Duration /*= 2.f*/,
+	const bool bPrintFunctionOwner, const bool bPrintToScreen /*= true*/, const bool bPrintToLog /*= true*/, const bool bPrintIfInvalid,
+	const FLinearColor TextColor /*= FLinearColor(1.0, 0.0, 0.0)*/, const FName Key /*= NAME_None*/)
 {
 	// Verify is object is valid
 	if (Object)
@@ -156,24 +172,24 @@ FString UFriesLibraryBPLibrary::RandomLetter(const bool bToUpper)
 	TArray<FString> Letters = { TEXT("A"), TEXT("B"), TEXT("C"), TEXT("D"), TEXT("E"), TEXT("F"), TEXT("G"), TEXT("H"), TEXT("I"),
 	TEXT("J"), TEXT("K"), TEXT("L"), TEXT("M"), TEXT("N"), TEXT("O"), TEXT("P"), TEXT("Q"), TEXT("R"), TEXT("S"), TEXT("T"), TEXT("U"), 
 	TEXT("V"), TEXT("W"), TEXT("X"), TEXT("Y"), TEXT("Z")};
-
+	
 	// Get random letter
 	const int32 RandIndex = FMath::RandRange(0, Letters.Num() - 1);
 
 	// Check if it's lowercase or uppercase
-	return bToUpper ? Letters[RandIndex].ToUpper() : Letters[RandIndex].ToLower();
+	return bToUpper ? Letters[RandIndex] : Letters[RandIndex].ToLower();
 }
 
 FString UFriesLibraryBPLibrary::RandomLetterInRange(int32 Min, int32 Max, const bool bToUpper)
 {
 	// Verify if the Max value are big (> 26)
-	if (Max > 26)
+	if (Max > 25 || Max < 1)
 	{
-		Max = 26;
+		Max = 25;
 	}
 
 	// Verify if the Min value are small (< 0)
-	if (Min < 0)
+	if (Min < 0 || Min > 24)
 	{
 		Min = 0;
 	}
@@ -268,13 +284,14 @@ EFlEngineScalabilityLevel UFriesLibraryBPLibrary::GetScalabilityLevel(const EFlE
 		Level = GameUserSettings->GetShadingQuality();
 		break;
 	}
-	return (EFlEngineScalabilityLevel)Level;
+	return static_cast<EFlEngineScalabilityLevel>(Level);
 }
 
-void UFriesLibraryBPLibrary::ModifyScalability(const EFlEngineScalabilityType ScalabilityToModify, const EFlEngineScalabilityLevel NewScalabilityLevel, const bool bSaveInConfig)
+void UFriesLibraryBPLibrary::ModifyScalability(const EFlEngineScalabilityType ScalabilityToModify, const EFlEngineScalabilityLevel NewScalabilityLevel,
+	const bool bSaveInConfig)
 {
 	// Convert level byte to int32
-	const int Level = (int)NewScalabilityLevel;
+	const int Level = static_cast<int>(NewScalabilityLevel);
 
 	// Get game user settings ref
 	UGameUserSettings* GameUserSettings = UGameUserSettings::GetGameUserSettings();
@@ -323,22 +340,22 @@ void UFriesLibraryBPLibrary::ModifyScalability(const EFlEngineScalabilityType Sc
 	}
 }
 
-void UFriesLibraryBPLibrary::SetOverallScalability(const UOverallScalability* OverallData, const EFlEngineScalabilityLevel NewScalabilityLevel)
+void UFriesLibraryBPLibrary::SetOverallScalability(const UOverallScalability* OverallData, const EFlEngineScalabilityLevel NewScalabilityLevel, const bool bSaveInConfig)
 {
 	// Verify if data asset is valid
 	if (OverallData)
 	{
 		// Set all scalability types by data asset
-		ModifyScalability(EFlEngineScalabilityType::AntiAliasing, OverallData->ScalabilityInfo.AntiAliasing, false);
-		ModifyScalability(EFlEngineScalabilityType::Effects, OverallData->ScalabilityInfo.Effects, false);
-		ModifyScalability(EFlEngineScalabilityType::Foliage, OverallData->ScalabilityInfo.Foliage, false);
-		ModifyScalability(EFlEngineScalabilityType::GlobalIllumination, OverallData->ScalabilityInfo.GlobalIllumination, false);
-		ModifyScalability(EFlEngineScalabilityType::PostProcessing, OverallData->ScalabilityInfo.PostProcessing, false);
-		ModifyScalability(EFlEngineScalabilityType::Reflections, OverallData->ScalabilityInfo.Reflections, false);
-		ModifyScalability(EFlEngineScalabilityType::Shading, OverallData->ScalabilityInfo.Shading, false);
-		ModifyScalability(EFlEngineScalabilityType::Shadows, OverallData->ScalabilityInfo.Shadows, false);
-		ModifyScalability(EFlEngineScalabilityType::Textures, OverallData->ScalabilityInfo.Textures, false);
-		ModifyScalability(EFlEngineScalabilityType::ViewDistance, OverallData->ScalabilityInfo.ViewDistance, false);
+		ModifyScalability(EFlEngineScalabilityType::AntiAliasing, OverallData->ScalabilityInfo.AntiAliasing, bSaveInConfig);
+		ModifyScalability(EFlEngineScalabilityType::Effects, OverallData->ScalabilityInfo.Effects, bSaveInConfig);
+		ModifyScalability(EFlEngineScalabilityType::Foliage, OverallData->ScalabilityInfo.Foliage, bSaveInConfig);
+		ModifyScalability(EFlEngineScalabilityType::GlobalIllumination, OverallData->ScalabilityInfo.GlobalIllumination, bSaveInConfig);
+		ModifyScalability(EFlEngineScalabilityType::PostProcessing, OverallData->ScalabilityInfo.PostProcessing, bSaveInConfig);
+		ModifyScalability(EFlEngineScalabilityType::Reflections, OverallData->ScalabilityInfo.Reflections, bSaveInConfig);
+		ModifyScalability(EFlEngineScalabilityType::Shading, OverallData->ScalabilityInfo.Shading, bSaveInConfig);
+		ModifyScalability(EFlEngineScalabilityType::Shadows, OverallData->ScalabilityInfo.Shadows, bSaveInConfig);
+		ModifyScalability(EFlEngineScalabilityType::Textures, OverallData->ScalabilityInfo.Textures, bSaveInConfig);
+		ModifyScalability(EFlEngineScalabilityType::ViewDistance, OverallData->ScalabilityInfo.ViewDistance, bSaveInConfig);
 
 		// Save new scalability
 		SaveGameUserSettings();
@@ -346,7 +363,7 @@ void UFriesLibraryBPLibrary::SetOverallScalability(const UOverallScalability* Ov
 	else
 	{
 		// Set all scalability types by level
-		ModifyScalability(EFlEngineScalabilityType::Overall, NewScalabilityLevel, true);
+		ModifyScalability(EFlEngineScalabilityType::Overall, NewScalabilityLevel, bSaveInConfig);
 	}
 }
 
@@ -492,17 +509,15 @@ void UFriesLibraryBPLibrary::SetGraphicsRHI(const EGraphicsRHI GraphicsRHI)
 	// Get current platform
 	const FString TargetPlataform = UGameplayStatics::GetPlatformName();
 
-	// Used later
-	FString DefaultGraphicsRHI;
-
 	// Set string variables to apply later
 	const FString RHI_DX11(TEXT("DefaultGraphicsRHI_DX11"));
 	const FString RHI_DX12(TEXT("DefaultGraphicsRHI_DX12"));
-	const FString RHI_VULKAN(TEXT("DefaultGraphicsRHI_Vulkan"));
+	const FString RHI_Vulkan(TEXT("DefaultGraphicsRHI_Vulkan"));
 
 	// This code just valid for Windows, sorry
 	if (TargetPlataform == "Windows")
 	{
+		FString DefaultGraphicsRHI;
 		// Set current RHI in GConfig
 		GConfig->GetString(TEXT("/Script/WindowsTargetPlatform.WindowsTargetSettings"), TEXT("DefaultGraphicsRHI"), DefaultGraphicsRHI, GEngineIni);
 		switch (GraphicsRHI)
@@ -520,6 +535,15 @@ void UFriesLibraryBPLibrary::SetGraphicsRHI(const EGraphicsRHI GraphicsRHI)
 			if (DefaultGraphicsRHI != "DefaultGraphicsRHI_DX12")
 			{
 				GConfig->SetString(TEXT("/Script/WindowsTargetPlatform.WindowsTargetSettings"), TEXT("DefaultGraphicsRHI"), *RHI_DX12, GEngineIni);
+				GConfig->Flush(true, GEngineIni);
+				return;
+			}
+			return;
+
+		case EGraphicsRHI::RHI_Vulkan:
+			if (DefaultGraphicsRHI != "DefaultGraphicsRHI_Vulkan")
+			{
+				GConfig->SetString(TEXT("/Script/WindowsTargetPlatform.WindowsTargetSettings"), TEXT("DefaultGraphicsRHI"), *RHI_Vulkan, GEngineIni);
 				GConfig->Flush(true, GEngineIni);
 				return;
 			}

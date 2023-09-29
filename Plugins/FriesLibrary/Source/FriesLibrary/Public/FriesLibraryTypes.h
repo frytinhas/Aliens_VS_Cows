@@ -8,7 +8,8 @@ UENUM(BlueprintType, Category = "FriesLibrary|Data|Enums")
 enum class EGraphicsRHI : uint8
 {
 	RHI_DX11    UMETA(DisplayName = "DirectX 11"),
-	RHI_DX12    UMETA(DisplayName = "DirectX 12")
+	RHI_DX12    UMETA(DisplayName = "DirectX 12"),
+	RHI_Vulkan  UMETA(DisplayName = "Vulkan")
 };
 
 // Enumeration used to get/set current ambient occlusion method

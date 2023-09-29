@@ -41,7 +41,7 @@ class UFriesLibraryBPLibrary : public UBlueprintFunctionLibrary
 // If Print To Log is true, it will be visible in the Output Log window.
 	UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject", CallableWithoutWorldContext, Keywords = "log print", AdvancedDisplay = "3", DevelopmentOnly), Category = "FriesLibrary|Development")
 	static void PrintFloat(const UObject* WorldContextObject, const float FloatValue = 0.f, const float Duration = 2.f, const bool bPrintFunctionOwner = true, const bool bPrintToScreen = true, const bool bPrintToLog = true, const FLinearColor TextColor = FLinearColor(0.0, 1.0, 0.0), const FName Key = NAME_None);
-
+	
 // Prints a name to the log, and optionally, to the screen
 // If Print To Log is true, it will be visible in the Output Log window.
 	UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject", CallableWithoutWorldContext, Keywords = "log print", AdvancedDisplay = "3", DevelopmentOnly), Category = "FriesLibrary|Development")
@@ -131,7 +131,7 @@ class UFriesLibraryBPLibrary : public UBlueprintFunctionLibrary
 // Additional Functions to Game User Settings
 	// Modify all scalability types by level
 	UFUNCTION(BlueprintCallable, meta = (Keywords = "scalability"), Category = "FriesLibrary|Settings|Scalability")
-    static void SetOverallScalability(const UOverallScalability* OverallData, const EFlEngineScalabilityLevel NewScalabilityLevel);
+    static void SetOverallScalability(const UOverallScalability* OverallData, const EFlEngineScalabilityLevel NewScalabilityLevel, const bool bSaveInConfig = true);
 	
 /// RHI Functions
 	// Set current RHI in the game (Needs restart)
@@ -157,3 +157,4 @@ class UFriesLibraryBPLibrary : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject", CallableWithoutWorldContext, Keywords = "raytracing"), Category = "FriesLibrary|Settings|Ray Tracing")
 	static bool SetRayTracing(const UObject* WorldContextObject, const bool bEnabled);
 };
+
